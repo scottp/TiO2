@@ -1,0 +1,76 @@
+{
+   "title" : "This is a remote form",
+   "items" : [
+      {
+         "type" : "Label",
+         "label" : "Personal details"
+      },
+      {
+         "name" : "first",
+         "label" : "First name"
+      },
+      {
+         "options" : {
+            "width" : 250
+         },
+         "name" : "family",
+         "label" : "Family name"
+      },
+      {
+         "type" : "Label",
+         "label" : "Account"
+      },
+      {
+         "name" : "email",
+         "label" : "Email address",
+         "type" : "Email"
+      },
+      {
+         "name" : "password",
+         "label" : "Password",
+         "type" : "Password",
+         "retype" : true
+      },
+      {
+         "type" : "Label",
+         "label" : "Place"
+      },
+      {
+         "type" : "Label",
+         "label" : "Specials"
+      },
+      {
+         "offValue" : "nope",
+         "name" : "onoff",
+         "label" : "Is this on?",
+         "type" : "Switch",
+         "onValue" : "Yeah"
+      },
+      {
+         "min" : 1,
+         "name" : "slider",
+         "max" : 3,
+         "label" : "How big?",
+         "type" : "Slider"
+      },
+      {
+         "date" : true,
+         "time" : true,
+         "name" : "datetime",
+         "label" : "When?",
+         "type" : "DateTime"
+      },
+      {
+         "name" : "choose",
+         "label" : "Choose !",
+         "type" : "Radio",
+         "list" : [
+            "One",
+            "Two",
+            "Three",
+            "Four"
+         ]
+      }
+   ]
+}
+

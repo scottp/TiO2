@@ -2,19 +2,9 @@ TiO2.Data.DBTable = TiO2.Data.Base.extend({
 	table: undefined,
 	db: undefined,
 	fields: [],
-
-	// Update the fields
 	init: function(attr) {
 		this._super(attr);
 		this.getDB();
-		this.setFields();
-	},
-
-	setFields: function() {
-		// Get the fields from the database if not provided
-		if (this.fields.length) {
-			// XXX get from the database
-		}
 	},
 
 	getDB: function() {
@@ -32,31 +22,26 @@ TiO2.Data.DBTable = TiO2.Data.Base.extend({
 
 	// Get all rows
 	getAll: function() {
-		// SQL Query = 
-		//	SELECT this.fields[] FROM this.table WHERE this.localFilter ORDER BY this.sortFields
 		var ret = [];
+		var sql = 'SELECT * FROM ' + this.table;
+		//if (this.filterLocal) {
+			// XXX add WHERE clause
+		//}
+		if (this.sortLocal) {
+			sql = sql + ' ORDER BY ' + this.sortLocal[0];
+		}
+		Ti.API.info("SQL = " + sql);
+		var rows = this.db.execute(sql);
+		while (rows.isValidRow()) {
+			ret.push({
+				first: rows.fieldByName('first'),
+				last: rows.fieldByName('last'),
+				email: rows.fieldByName('email')
+			});
+			rows.next();
+		}
+		rows.close();
 		return ret;
-	},
-
-	// Number of records
-
-	// Add a row (always to the end for now)
-	addRow: function(d) {
-		// XXX Insert a new row in the DB
-	},
-
-	// Sort the data
-	sortFields: [],
-	sort: function(fields) {
-		if (typeof(fields) == 'string') { fields = [ fields ]; }
-		// TODO: Check they exist in fileds
-		this.sortFields = fields;
-	},
-
-	filterLocal: {},
-	filter: function(d) {
-		// Filter d is object - key = value in each record
-		this.filterLocal = d;
-	},
+	}
 
 });

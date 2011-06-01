@@ -14,7 +14,7 @@ TiO2.FormLayout.Simple = TiO2.FormLayout.Base.extend({
 			buttons: [],
 			labelLeft: 10,
 			labelSep: 5,
-			borderStyle: Titanium.UI.INPUT_BORDERSTYLE_ROUNDED,
+			borderStyle: Titanium.UI.INPUT_BORDERSTYLE_ROUNDED
 		});
 
 		this.view = Ti.UI.createView(TiO2.Util.defaults(data.viewOptions, {
@@ -37,7 +37,7 @@ TiO2.FormLayout.Simple = TiO2.FormLayout.Base.extend({
 					label: 'Label not defined for ' + count,
 					type: 'Text',
 					value: '',
-					hintText: 'Click to enter value',
+					hintText: 'Click to enter value'
 				});
 
 				// XXX mess between entry vs option - entry is a row in the form, but options
@@ -53,7 +53,7 @@ TiO2.FormLayout.Simple = TiO2.FormLayout.Base.extend({
 					height: this.data.defaultHeight,
 					left: 10,
 					// backgroundColor: '#f00',
-					width: this.data.labelWidth,
+					width: this.data.labelWidth
 				}));
 				this.view.add(label);
 
@@ -65,7 +65,7 @@ TiO2.FormLayout.Simple = TiO2.FormLayout.Base.extend({
 						width: this.data.fieldWidth,
 						hintText: entry.hintText,
 						value: entry.value,
-						borderStyle: this.data.borderStyle,
+						borderStyle: this.data.borderStyle
 					}));
 					if (component.view) {
 						this.fields[entry.name] = {
@@ -89,7 +89,7 @@ TiO2.FormLayout.Simple = TiO2.FormLayout.Base.extend({
 		}
 
 		this.addButtons();
-	},
+	}
 
 });
 

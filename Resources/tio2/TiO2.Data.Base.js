@@ -15,6 +15,6 @@ TiO2.Data.Base = TiO2.Base.extend({
 		// Filter d is object - key = value in each record
 		this.filterLocal = d;
 		this.fireCustomEvent('change', { data: this, type: 'filter', sort: d});
-	},
+	}
 
 });

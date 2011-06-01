@@ -114,8 +114,7 @@ TiO2.Field.Base = TiO2.Base.extend({
 				contt++;
 			}
 		}
-	},
-
+	}
 
 });
 

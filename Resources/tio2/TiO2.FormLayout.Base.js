@@ -31,13 +31,13 @@ TiO2.FormLayout.Base = TiO2.Base.extend({
 			if (this.data.buttons[n]) {
 				count++;
 				var entry = TiO2.Util.defaults(this.data.buttons[n], {
-					name: 'automatic_' + count,
+					name: 'automatic_' + count
 				});
 				var btn = Titanium.UI.createButton(TiO2.Util.defaults(entry.options, {
 					title: entry.label,
 					height: this.data.defaultHeight,
 					// top: this.lastTop + 100,		// XXX Hack to move button down
-					left: this.data.labelLeft + this.data.labelWidth + this.data.labelSep,
+					left: this.data.labelLeft + this.data.labelWidth + this.data.labelSep
 				}));
 				this.buttons[entry.name] = btn;
 				// XXX TiO2.FormLayout.Util.addHandler(btn, entry, this);
@@ -62,8 +62,7 @@ TiO2.FormLayout.Base = TiO2.Base.extend({
 			}
 		}
 		return true;
-	},
-		
+	}
 
 });
 

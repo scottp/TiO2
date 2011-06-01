@@ -39,7 +39,7 @@ TiO2.Base = TiO2Class.extend({
 				this.customEvents[name][i](attr);
 			}
 		}
-	},
+	}
 
 });
 

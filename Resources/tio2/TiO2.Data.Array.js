@@ -6,24 +6,11 @@ TiO2.Data.Array = TiO2.Data.Base.extend({
 	// Update the fields
 	init: function(attr) {
 		this._super(attr);
-		this.setFields();
 	},
 
 	// Replace 'data'
 	setData: function(data) {
 		this.data = data;
-		this.setFields();
-	},
-
-	// Set the 'fields' fromt he first row
-	setFields: function() {
-		// Expect 'data' to be now filled
-		this.fields = [];
-		for (var k in this.data[0]) {
-			if (this.data[0][k]) {
-				this.fields.push(k);
-			}
-		}
 	},
 
 	getByName: function(key, val) {
@@ -84,7 +71,7 @@ TiO2.Data.Array = TiO2.Data.Base.extend({
 		});
 
 		this.fireCustomEvent('change', { data: this, type: 'sort', fields: fields});
-	},
+	}
 
 });
 

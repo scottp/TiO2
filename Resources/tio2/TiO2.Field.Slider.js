@@ -10,9 +10,9 @@ TiO2.Field.Slider = TiO2.Field.Base.extend({
 			value:1,
 			width:100,
 			height:'auto',
-			top:30,
+			top:30
 		}));
 		this.view = this.ui;
-	},
+	}
 });
 

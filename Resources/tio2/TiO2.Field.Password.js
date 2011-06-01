@@ -3,7 +3,7 @@ TiO2.Field.Password = TiO2.Field.Text.extend({
 	init: function(attr, options) {
 		this._super(attr, TiO2.Util.defaults(options, {
 			passwordMask: true,
-			autocorrect: false,
+			autocorrect: false
 		}));
 
 		if (this.retype) {
@@ -21,7 +21,7 @@ TiO2.Field.Password = TiO2.Field.Text.extend({
 					top: 43,
 					borderStyle: Titanium.UI.INPUT_BORDERSTYLE_ROUNDED,
 					value: '',
-					hintText: 'Enter password again',
+					hintText: 'Enter password again'
 				});
 				var wt = new TiO2.Helper.Popup({
 					keyboard: true,	// Space for the keyboard
@@ -43,7 +43,7 @@ TiO2.Field.Password = TiO2.Field.Text.extend({
 							that.ui.value = "";
 							that.ui.focus();
 						}
-					},
+					}
 				});
 				wt.open();
 			});

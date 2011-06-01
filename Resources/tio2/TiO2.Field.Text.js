@@ -4,7 +4,7 @@ TiO2.Field.Text = TiO2.Field.Base.extend({
 		this._super(attr, options);
 		this.ui = Titanium.UI.createTextField(TiO2.Util.defaults(options, {
 			hintText: 'Enter text',
-			value: '',
+			value: ''
 		}));
 		this.view = this.ui;
 		this.addHandlers();
@@ -17,7 +17,7 @@ TiO2.Field.Text = TiO2.Field.Base.extend({
 	isValid: function() {
 		// XXX bogus test
 		return (this.getValue() != 'Scott');
-	},
+	}
 
 /*
 	addValidate: function() {

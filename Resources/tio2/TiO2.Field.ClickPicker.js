@@ -15,7 +15,7 @@ TiO2.Field.ClickPicker = TiO2.Field.Base.extend({
 		this.ui.addEventListener('click', function() {
 			Ti.API.info('TYPE = ' + that.pickerType);
 			var picker = Titanium.UI.createPicker(TiO2.Util.defaults(options, {
-					top:43,
+				top:43
 			}));
 			picker.selectionIndicator=true;
 			if (that.list) {
@@ -26,7 +26,7 @@ TiO2.Field.ClickPicker = TiO2.Field.Base.extend({
 				ui: picker,
 				onDone: function(f, w) {
 					that.setValue(f.getSelectedRow(0).title);
-				},
+				}
 			});
 			wt.open();
 		});
@@ -40,7 +40,7 @@ TiO2.Field.ClickPicker = TiO2.Field.Base.extend({
 	setValue: function(v) {
 		this.value = v;
 		this.ui.title = v;
-	},
+	}
 
 });
 

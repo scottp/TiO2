@@ -7,7 +7,7 @@ TiO2.Field.Radio = TiO2.Field.Base.extend({
 			backgroundColor:'maroon',
 			// Note that 'index' is the location in the label, not the value of the label
 			// Therefore might want to do getIndex(this.value) to find
-			index: this.value,
+			index: this.value
 		}));
 		this.view = this.ui;
 	},
@@ -19,6 +19,6 @@ TiO2.Field.Radio = TiO2.Field.Base.extend({
 	},
 	setValue: function() {
 		// XXX Find the index in the list to set
-	},
+	}
 });
 

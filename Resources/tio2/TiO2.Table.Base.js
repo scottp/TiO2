@@ -36,9 +36,9 @@ TiO2.Table.Base = TiO2.Base.extend({
 			// XXX move down
 		}
 		*/
-		else {
+		//else {
 			// XXX how to throw an error here
-		}
+		//}
 
 		// If change, add the rows again
 		var that = this;
@@ -50,9 +50,9 @@ TiO2.Table.Base = TiO2.Base.extend({
 
 	// ======================================================================
 	buildColumns: function() {
-		if (this.columns.length == 0) {
+		//if (this.columns.length == 0) {
 			// Populate columns with a guess based on the first row
-		}
+		//}
 	},
 
 	// ======================================================================
@@ -61,7 +61,7 @@ TiO2.Table.Base = TiO2.Base.extend({
 		return Ti.UI.createTableView(TiO2.Util.defaults(this.options, {
 			separatorColor: this.separatorColor,
 			headerView: this.createHeader(),
-			data: this.createRows(),
+			data: this.createRows()
 		}));
 	},
 
@@ -110,7 +110,7 @@ TiO2.Table.Base = TiO2.Base.extend({
 		var headerView = Ti.UI.createView({
 			height: this.headerHeight,
 			borderWidth: 1,
-			borderColor: this.separatorColor,
+			borderColor: this.separatorColor
 		});
 		var leftHeader = 0;
 		var that = this;
@@ -123,7 +123,7 @@ TiO2.Table.Base = TiO2.Base.extend({
 				this.columns[r].label,
 				{
 					shadowColor:'#aaa',
-					shadowOffset:{x:2,y:2},
+					shadowOffset:{x:2,y:2}
 				},
 				function(content) {
 					// Add 'sort' on click column heading
@@ -137,6 +137,6 @@ TiO2.Table.Base = TiO2.Base.extend({
 			);
 		}
 		return headerView;
-	},
+	}
 
 });

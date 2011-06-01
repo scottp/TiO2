@@ -22,7 +22,7 @@ TiO2.Helper.Popup = TiO2.Base.extend({
 			height: this.pos,
 			bottom: this.pos * -1,
 			backgroundColor: 'white',
-			transparent: 1,
+			transparent: 1
 		});
 		var cancel =  Titanium.UI.createButton({
 			title:'Cancel',
@@ -53,7 +53,7 @@ TiO2.Helper.Popup = TiO2.Base.extend({
 				top: 1,
 				left: 1,
 				backgroundColor:'black',
-				opacity: 0.7,
+				opacity: 0.7
 			});
 			this.picker_win.add(view);
 		}
@@ -93,6 +93,6 @@ TiO2.Helper.Popup = TiO2.Base.extend({
 		this.picker_view.animate({bottom: this.pos * -1}, function() {
 			that.picker_win.close();
 		});
-	},
+	}
 });
 

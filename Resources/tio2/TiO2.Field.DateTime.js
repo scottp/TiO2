@@ -23,7 +23,7 @@ TiO2.Field.DateTime = TiO2.Field.Base.extend({
 			var picker = Titanium.UI.createPicker(TiO2.Util.defaults(options, {
 				top:43,
 				type: pickerType,
-				value: saved,
+				value: saved
 			}));
 			picker.selectionIndicator=true;
 			var wt = new TiO2.Helper.Popup({
@@ -34,7 +34,7 @@ TiO2.Field.DateTime = TiO2.Field.Base.extend({
 					that.ui.title =  f.value;
 					that.ui.value =  f.value;
 					saved = f.value;
-				},
+				}
 			});
 			wt.open();
 		});

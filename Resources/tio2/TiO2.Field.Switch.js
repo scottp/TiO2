@@ -5,7 +5,7 @@ TiO2.Field.Switch = TiO2.Field.Base.extend({
 	init: function(attr, options) {
 		this._super(attr, options);
 		this.ui = Titanium.UI.createSwitch({
-			value: attr.value == this.onValue,
+			value: attr.value == this.onValue
 		});
 		this.view = this.ui;
 		// value !
@@ -13,7 +13,7 @@ TiO2.Field.Switch = TiO2.Field.Base.extend({
 	},
 	getValue: function() {
 		return this.ui.value ? this.onValue : this.offValue;
-	},
+	}
 	// setValue for onValue and offValue
 });
 

@@ -39,26 +39,26 @@ TiO2.Table.Grid = TiO2.Table.Base.extend({
 		// Left padding
 		view.add(Ti.UI.createLabel({
 			left: left,
-			width: this.padding,
+			width: this.padding
 		}));
 		left += this.padding;
 
 		// Content
-		var content = Ti.UI.createLabel(TiO2.Util.defaults(options, {
+		var content2 = Ti.UI.createLabel(TiO2.Util.defaults(options, {
 			left: left,
 			width: width,
-			text: content,
+			text: content
 		}));
 		// XXX Really, a callback for this?
-		if (callback) callback(content);
-		view.add(content);
+		if (callback) callback(content2);
+		view.add(content2);
 
 		left += width;
 
 		// Right padding
 		view.add(Ti.UI.createLabel({
 			left: left,
-			width: this.padding,
+			width: this.padding
 		}));
 		left+= this.padding;
 
@@ -66,12 +66,12 @@ TiO2.Table.Grid = TiO2.Table.Base.extend({
 			left: left,
 			width: 1,
 			borderColor: this.separatorColor,
-			borderWidth: 1,
+			borderWidth: 1
 		}));
 		left += 1;
 
 		return left;
-	},
+	}
 
 });
 

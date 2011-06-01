@@ -44,6 +44,6 @@ TiO2.Util = {
 			}
 		}
 		return to;
-	},
+	}
 
 };

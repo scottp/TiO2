@@ -8,17 +8,6 @@ TiO2.Data.Properties = TiO2.Data.Base.extend({
 
 /* NOT YET WRITTEN 
 
-	// Set the 'fields' fromt he first row
-	setFields: function() {
-		// Expect 'data' to be now filled
-		this.fields = [];
-		for (var k in this.data[0]) {
-			if (this.data[0][k]) {
-				this.fields.push(k);
-			}
-		}
-	},
-
 	getByName: function(key, val) {
 		// Return a record matching key=val (e.g. id=3)
 		for (var i=0; i < this.data.length; i++) {
@@ -61,9 +50,9 @@ TiO2.Data.Properties = TiO2.Data.Base.extend({
 			*/
 
 			// TODO: Bool Double Int List String - currently this doesn't really work
-			var val = Titanium.App.Properties.getString(properties[i]),
+			var val = Titanium.App.Properties.getString(properties[i]);
 			if (!val) {
-				val = Titanium.App.Properties.getList(properties[i]),
+				val = Titanium.App.Properties.getList(properties[i]);
 			}
 			ret.push({
 				key: properties[i],
@@ -82,7 +71,7 @@ TiO2.Data.Properties = TiO2.Data.Base.extend({
 			});
 		}
 		return ret;
-	},
+	}
 
 });
 

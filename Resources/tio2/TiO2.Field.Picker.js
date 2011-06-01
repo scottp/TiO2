@@ -5,12 +5,12 @@ TiO2.Field.Picker = TiO2.Field.Base.extend({
 		this._super(attr, options);
 		this.view = Ti.UI.createView({
 			// Consider using defaults?
-			height: 150,
+			height: 150
 		});
 		this.ui = Titanium.UI.createPicker(TiO2.Util.defaults(options, {
 			height:150,
-			top:1,
-			left:1,
+			top: 1,
+			left: 1
 		}));
 
 		this.addHandlers();

@@ -13,10 +13,10 @@ TiO2.Table.Single = TiO2.Table.Base.extend({
 	// createHeader - a view is expected on return, even if empty
 	createHeader: function() {
 		var headerView = Ti.UI.createView({
-			height: 1,
+			height: 1
 		});
 		return headerView;
-	},
+	}
 
 });
 

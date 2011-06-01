@@ -12,8 +12,8 @@ TiO2.FormLayout.Default = TiO2.FormLayout.Base.extend({
 			items: [],
 			buttons: [],
 			labelLeft: 10,
-			labelSep: 5,
 			// borderStyle: Titanium.UI.INPUT_BORDERSTYLE_ROUNDED,
+			labelSep: 5
 		});
 
 		this.view = Ti.UI.createView(TiO2.Util.defaults(data.viewOptions, {
@@ -24,7 +24,7 @@ TiO2.FormLayout.Default = TiO2.FormLayout.Base.extend({
 			// left: 1,
 			layout: 'vertical',
 			backgroundColor:'transparent',
-			rowBackgroundColor:'white',
+			rowBackgroundColor:'white'
 		}));
 
 		var count = 0;
@@ -42,7 +42,7 @@ TiO2.FormLayout.Default = TiO2.FormLayout.Base.extend({
 					label: 'Label not defined for ' + count,
 					type: 'Text',
 					value: '',
-					hintText: 'Click to enter value',
+					hintText: 'Click to enter value'
 				});
 				this.fields[entry.name] = {};
 
@@ -71,7 +71,7 @@ TiO2.FormLayout.Default = TiO2.FormLayout.Base.extend({
 							left: this.data.labelLeft + this.data.labelWidth + this.data.labelSep,
 							width: this.data.fieldWidth,
 							borderStyle: this.data.borderStyle,
-							color: '#333399',
+							color: '#333399'
 						}));
 						this.fields[entry.name].component = component;
 
@@ -104,12 +104,12 @@ TiO2.FormLayout.Default = TiO2.FormLayout.Base.extend({
 			style: Titanium.UI.iPhone.TableViewStyle.GROUPED,
 			backgroundColor:'transparent',
 			rowBackgroundColor:'white',
-			data: rows,
+			data: rows
 		});
 		this.view.add(table);
 
 		this.addButtons();
-	},
+	}
 
 });
 

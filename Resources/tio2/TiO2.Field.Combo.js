@@ -33,7 +33,7 @@ TiO2.Field.Combo = TiO2.Field.Text.extend({
 				ui: picker,
 				onDone: function(f, w) {
 					that.setValue(f.getSelectedRow(0).title);
-				},
+				}
 			});
 			wt.open();
 		});

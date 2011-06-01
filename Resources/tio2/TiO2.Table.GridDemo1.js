@@ -8,7 +8,7 @@ TiO2.Table.GridDemo1 = TiO2.Table.Grid.extend({
 	// How to disable the header
 	createHeader: function() {
 		return Ti.UI.createView({
-			height: 1,
+			height: 1
 		});
 	},
 
@@ -17,7 +17,7 @@ TiO2.Table.GridDemo1 = TiO2.Table.Grid.extend({
 		var row = Ti.UI.createTableViewRow({ 
 			height: this.rowHeight ,
 			className: 'datarow',	// XXX what are these for? Investigate use of class
-			clickName: 'row',
+			clickName: 'row'
 		});
 
         var photo = Ti.UI.createView({
@@ -26,7 +26,7 @@ TiO2.Table.GridDemo1 = TiO2.Table.Grid.extend({
                 left:10,
                 width:50,
                 height:50,
-                clickName:'photo',
+                clickName:'photo'
         });
         row.add(photo);
         
@@ -83,6 +83,6 @@ TiO2.Table.GridDemo1 = TiO2.Table.Grid.extend({
         row.add(date);
 
 		return row;
-	},
+	}
 });
 
